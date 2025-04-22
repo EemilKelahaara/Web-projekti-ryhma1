@@ -1,20 +1,23 @@
 body { text-align: center; font-family: Arial, sans-serif; }
 img { width: 200px; height: auto; margin: 20px; }
 .peli1 {
-  background-color: lightgray;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   width: 50%;
-  margin-left: 30%;
+  margin-left: 25%;
   margin-top: 5%;
+  margin-bottom: 10%;
+  border-radius: 10px;
 }
 
 h1 {
-    color: #1F7337;
+    color: #43C368;
     text-decoration: underline;
     
 }
 
 p {
-    color: #1F7337;
+    color: #43C368;
 }
 
 button {
@@ -24,6 +27,8 @@ button {
     margin-bottom: 5%;
     height: 10%;
     width: 25%;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 button:hover {
