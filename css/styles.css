@@ -1,86 +1,162 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-header {
+  }
+  
+  header {
     background-color: #43C368;
     padding: 10px;
     display: flex;
     align-items: center;
-}
-
-button {
-    margin-left: 10px;
-    padding: 5px 15px;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    font-size: 24px;
     background-color: white;
     border: none;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    padding: 5px 15px;
     cursor: pointer;
-}
-
-button:hover {
-    color: #43C368;
+    transition: all 0.3s ease;
+    z-index: 10; /* Ensure the hamburger button is on top */
+  }
+  
+  .menu-toggle:hover {
     background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #43C368;
     transform: scale(1.1);
-}
-
-nav {
-    margin-left: auto;
-    margin-right: 50px;
-}
-
-nav a {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+  }
+  
+  .logo {
     color: white;
-    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav a {
+    color: white;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
     transition: all 0.3s ease;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #43C368;
     background-color: white;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-}
-
-footer {
+    transform: scale(1.1); /* Hover effect for larger screens */
+  }
+  
+  footer {
     background-color: #43C368;
     color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-footer a {
+  }
+  
+  footer a {
     text-decoration: underline;
     color: white;
     font-size: 18px;
     margin-left: 20px;
     transition: color 0.3s ease;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     color: #cfead8;
-}
-
-.copyright {
+  }
+  
+  .copyright {
     text-align: center;
-}
-
-footer img {
+  }
+  
+  footer img {
     width: 50px;
     height: auto;
     margin-right: 20px;
-}
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 555px) {
+    /* Make navigation a vertical menu */
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #43C368;
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      padding: 10px 0;
+    }
+  
+    /* Show nav menu when 'open' class is added */
+    nav.open {
+      display: flex;
+    }
+  
+    nav a {
+      border-bottom: 1px solid white;
+      padding: 15px 0;
+    }
+  
+    /* Apply hover effect for mobile view */
+    .navbar a:hover {
+      color: #43C368;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+  
+    /* Show hamburger button on mobile */
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Default styles for larger screens (above 555px) */
+  @media screen and (min-width: 556px) {
+    /* Hide hamburger menu button on larger screens */
+    .menu-toggle {
+      display: none;
+    }
+  
+    /* Regular horizontal navigation for larger screens */
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+  
+    nav a {
+      padding: 5px 10px;
+    }
+  
+    /* Hover effect for larger screens */
+    .navbar a:hover {
+      color: #43C368;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+  }
+  
