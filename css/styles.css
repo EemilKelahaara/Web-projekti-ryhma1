@@ -1,17 +1,30 @@
+<<<<<<< HEAD
 
 /* General Styles */
+=======
+>>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+<<<<<<< HEAD
   }
   
   header {
+=======
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+>>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     background-color: #43C368;
     padding: 10px;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between;
     position: relative;
   }
@@ -63,19 +76,47 @@ body {
   }
   
   footer {
+=======
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 15px;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer {
+>>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     background-color: #43C368;
     color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
   }
   
   footer a {
+=======
+}
+
+footer a {
+>>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     text-decoration: underline;
     color: white;
     font-size: 18px;
     margin-left: 20px;
+<<<<<<< HEAD
     transition: color 0.3s ease;
   }
   
@@ -161,3 +202,70 @@ body {
     }
   }
   
+=======
+}
+
+.copyright {
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.game-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.peli {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+}
+
+.peli img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.peli p {
+    margin-top: 10px;
+}
+
+
+.linkkikuva {
+    display: inline-block; 
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkkikuva img {
+    display: block;
+    margin: 0 auto;
+}
+
+.linkkikuva p {
+    margin: 10px 0 0 0;
+}
+
+main {
+    flex: 1;
+}
+
+.alateksti {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+>>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
