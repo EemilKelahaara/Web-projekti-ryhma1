@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maanosapeli</title>
+    <link rel="stylesheet" href="./css/peli3.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <a href="index.html"class="logo">Etusivu</a>
+        <nav class="navbar" id="navLinks">
+          <a href="peli1.html">Lippupeli</a>
+          <a href="peli3.html">Maanosapeli</a>
+          <a href="peli2.html">Pääkaupunkipeli</a>
+        </nav>
+      </header>
     <main>
-        <div>
+
+    
+        <div class="peli3">
             <h1>Arvaa maanosa</h1>
             <img id="maanosakuvat" src="" alt="maanosakuva">
             <label for="maanosa">Arvaa maanosa:</label>
@@ -24,7 +37,23 @@
             <p id="palaute"></p>
             <p id="pisteet">Pisteet: 0</p>
         </div>
+
+        <script type="text/javascript" src="./js/peli3.js"></script>
     </main>
-    <script type="text/javascript" src="./js/peli2.js"></script>
+    <footer>
+        <a href="#">Maantieto</a>
+        <div class="copyright">
+          <p>Copyright</p>
+          <p>A. Jolanki Fanclub</p>
+        </div>
+        <img src="Finland_flag_Border_ml.png" alt="Suomen lippu" />
+      </footer>
+
+      <script>
+        function toggleMenu() {
+          const nav = document.getElementById('navLinks');
+          nav.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

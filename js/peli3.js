@@ -46,9 +46,13 @@ document.querySelector('input[type="submit"]').addEventListener("click", (event)
 
   if (nykyinenIndeksi >= maanosat.length) {
     kuvaElementti.style.display = "none";
-    document.querySelector('input[type="submit"]').disabled = true;
+    document.getElementById("maanosa").style.display = "none";
+    document.querySelector('label[for="maanosa"]').style.display = "none";
+    document.querySelector('input[type="submit"]').style.display = "none";
     palauteElementti.textContent += ` Peli loppui! Sait ${pisteet} / ${maanosat.length} pistettä.`;
-  } else {
+  }
+  
+   else {
     kuvaElementti.src = maanosat[nykyinenIndeksi].kuva;
   }
 });
