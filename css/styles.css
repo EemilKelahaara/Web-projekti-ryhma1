@@ -1,30 +1,17 @@
-<<<<<<< HEAD
-
 /* General Styles */
-=======
->>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-<<<<<<< HEAD
   }
-  
-  header {
-=======
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 header {
->>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     background-color: #43C368;
     padding: 10px;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     justify-content: space-between;
     position: relative;
   }
@@ -74,10 +61,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1); /* Hover effect for larger screens */
   }
-  
-  footer {
-=======
-}
 
 button {
     margin-left: 10px;
@@ -96,27 +79,19 @@ nav a {
 }
 
 footer {
->>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     background-color: #43C368;
     color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
   }
   
-  footer a {
-=======
-}
-
 footer a {
->>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
     text-decoration: underline;
     color: white;
     font-size: 18px;
     margin-left: 20px;
-<<<<<<< HEAD
     transition: color 0.3s ease;
   }
   
@@ -201,9 +176,6 @@ footer a {
       transform: scale(1.1);
     }
   }
-  
-=======
-}
 
 .copyright {
     text-align: center;
@@ -268,4 +240,3 @@ main {
     font-size: 16px;
     font-weight: bold;
 }
->>>>>>> 1fb6256956463d899ea96d208c2efb7cbc4b4f95
