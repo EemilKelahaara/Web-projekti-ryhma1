@@ -1,22 +1,4 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-}
 
-body {
-  
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* keskitys vaakasuunnassa */
-    align-items: center;     /* keskitys pystysuunnassa */
-    background-color: white;
-    font-family: sans-serif;
-  }
   h1 {
     text-align: center;
     width: 100%;
@@ -37,6 +19,9 @@ body {
   padding: 80px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 #flag {

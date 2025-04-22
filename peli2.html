@@ -5,10 +5,19 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pääkaupunkipeli</title>
-   
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="css/peli2.css">
 </head>
 <body>
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <a href="index.html"class="logo">Etusivu</a>
+        <nav class="navbar" id="navLinks">
+          <a href="peli1.html">Lippupeli</a>
+          <a href="#">Maanosapeli</a>
+          <a href="peli2.html">Pääkaupunkipeli</a>
+        </nav>
+      </header>
     <div class="container">
     <h1><u>Arvaa pääkaupunki</u></h1>
         <img id="flag" src="" alt="Maan lippu">
@@ -21,6 +30,21 @@
         <div id="score"></div>
     </div>
     <script src="js/peli2.js"></script>
+    <footer>
+        <a href="#">Maantieto</a>
+        <div class="copyright">
+          <p>Copyright</p>
+          <p>A. Jolanki Fanclub</p>
+        </div>
+        <img src="Finland_flag_Border_ml.png" alt="Suomen lippu" />
+      </footer>
+    
+      <script>
+        function toggleMenu() {
+          const nav = document.getElementById('navLinks');
+          nav.classList.toggle('open');
+        }
+      </script>
   </body>
   
 </html>
