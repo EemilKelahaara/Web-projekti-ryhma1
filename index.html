@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,5 +10,194 @@
 <body>
     <h1>Tervetuloa!</h1>
     <h4>Tällä sivulla opit maantietoa.</h4>
+=======
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maantieto pelit</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #43C368;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10; /* Ensure the hamburger button is on top */
+    }
+
+    .menu-toggle:hover {
+      background-color: #f0f0f0;
+      color: #43C368;
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    }
+
+    .logo {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #43C368;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #43C368;
+      color: black;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer a {
+      text-decoration: underline;
+      color: white;
+      font-size: 18px;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #cfead8;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    footer img {
+      width: 50px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: 555px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #43C368;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        border-bottom: 1px solid white;
+        padding: 15px 0;
+      }
+
+      /* Apply hover effect for mobile view */
+      nav a:hover {
+        color: #43C368;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+      }
+
+      /* Show hamburger menu on small screens */
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hide hamburger menu on large screens */
+    @media screen and (min-width: 556px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      /* Regular horizontal navigation for larger screens */
+      nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      nav a {
+        padding: 5px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="logo">Etusivu</div>
+    <nav class="navbar" id="navLinks">
+      <a href="#">Lippupeli</a>
+      <a href="#">Maanosapeli</a>
+      <a href="#">Pääkaupunkipeli</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Maantieto pelit</h1>
+    <h4>Tervetuloa meidän nettisivuillemme!</h4>
+    <h4>Täällä pääset hiomaan osaamistasi maantiedosta lippupelin ja maanosapelien avulla.</h4>
+  </main>
+
+  <footer>
+    <a href="#">Maantieto</a>
+    <div class="copyright">
+      <p>Copyright</p>
+      <p>A. Jolanki Fanclub</p>
+    </div>
+    <img src="Finland_flag_Border_ml.png" alt="Suomen lippu" />
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('open');
+    }
+  </script>
+
+>>>>>>> 291f36ecaaacd9cee710a0fea60d523855611da1
 </body>
 </html>
