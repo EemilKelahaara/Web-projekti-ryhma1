@@ -1,0 +1,32 @@
+body { text-align: center; font-family: Arial, sans-serif; }
+img { width: 200px; height: auto; margin: 20px; }
+.peli1 {
+  background-color: lightgray;
+  width: 50%;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+h1 {
+    color: #1F7337;
+    text-decoration: underline;
+    
+}
+
+p {
+    color: #1F7337;
+}
+
+button {
+    background-color: #43C368; 
+    color: #FFFFFF; 
+    border: none;
+    margin-bottom: 5%;
+    height: 10%;
+    width: 25%;
+}
+
+button:hover {
+    background-color: #1F7337;
+    cursor: pointer;
+}
