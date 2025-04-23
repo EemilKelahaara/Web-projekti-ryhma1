@@ -1,11 +1,8 @@
-
-  h1 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px; /* valinnainen tyylittely */
-  }
-  
-
+h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px; /* valinnainen tyylittely */
+}
 
 .container {
   width: 100%;
@@ -19,9 +16,7 @@
   padding: 80px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-left: 25%;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin: 5% auto 10%;
 }
 
 #flag {
@@ -38,6 +33,21 @@ button {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
-  
 }
 
+/* 🌐 Responsiivisuus pienemmille näytöille */
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px; /* vähemmän sisennystä pienessä ruudussa */
+    margin: 10% auto;
+  }
+
+  #flag {
+    width: 100px; /* skaalaa pienemmäksi */
+  }
+
+  .button2 {
+    width: 80%; /* helpompi klikata mobiilissa */
+    font-size: 1.1rem;
+  }
+}
