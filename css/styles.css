@@ -12,6 +12,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width:100%;
   }
   
   .menu-toggle {
@@ -79,7 +80,6 @@ nav a {
 footer {
     background-color: #43C368;
     color: black;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
