@@ -1,7 +1,7 @@
 h1 {
   text-align: center;
   width: 100%;
-  margin-bottom: 30px; /* valinnainen tyylittely */
+  margin-bottom: 30px; 
 }
 
 .container {
@@ -25,7 +25,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-button {
+.button2 {
   color: white;
   background-color: #43C368;
   border: none;
@@ -35,19 +35,19 @@ button {
   border-radius: 5px;
 }
 
-/* 🌐 Responsiivisuus pienemmille näytöille */
+/*  Responsiivisuus pienemmille näytöille */
 @media (max-width: 600px) {
   .container {
-    padding: 40px 20px; /* vähemmän sisennystä pienessä ruudussa */
+    padding: 40px 20px; 
     margin: 10% auto;
   }
 
   #flag {
-    width: 100px; /* skaalaa pienemmäksi */
+    width: 100px;
   }
 
   .button2 {
-    width: 80%; /* helpompi klikata mobiilissa */
+    width: 80%; 
     font-size: 1.1rem;
   }
 }

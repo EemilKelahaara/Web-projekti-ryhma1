@@ -5,11 +5,11 @@
     
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pääkaupunkipeli</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css"> <!--Linkitykset-->
     <link rel="stylesheet" href="css/peli2.css">
 </head>
 <body>
-    <header>
+    <header><!--Navigointipalkki-->
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <a href="index.html"class="logo">Etusivu</a>
         <nav class="navbar" id="navLinks">
@@ -39,9 +39,9 @@
         <img src="kuvat/Finland_flag_Border_ml.png" alt="Suomen lippu" />
       </footer>
     
-      <script>
+      <script> 
         function toggleMenu() {
-          const nav = document.getElementById('navLinks');
+          const nav = document.getElementById('navLinks'); // Avaa mobiili valikon
           nav.classList.toggle('open');
         }
       </script>
