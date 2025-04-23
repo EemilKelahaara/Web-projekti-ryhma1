@@ -18,7 +18,37 @@ img { width: 500px; height: auto; margin: 20px; }
 }
 
 h1 {
-    color: #1F7337;
     text-decoration: underline;
     
+}
+
+.peli3 img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.peli3 select,
+.peli3 input[type="submit"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .peli3 {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .peli3 h1 {
+    font-size: 1.5rem;
+  }
+
+  .peli3 input[type="submit"] {
+    font-size: 1rem;
+  }
 }
