@@ -1,8 +1,20 @@
-body { text-align: center; font-family: Arial, sans-serif; }
-img { width: 150px; height: auto; margin: 20px; }
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  margin: 20px;
+}
+
 .peli1 {
   background-color: #f5f5f5;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 50%;
   margin-left: 25%;
   margin-top: 5%;
@@ -11,50 +23,41 @@ img { width: 150px; height: auto; margin: 20px; }
 }
 
 h1 {
-    color: #43C368;
-    text-decoration: underline;
-    
+  color: #43C368;
+  text-decoration: underline;
 }
 
 p {
-    color: black;
+  color: black;
 }
 
-button3e2 {
-    background-color: #43C368; 
-    color: #FFFFFF; 
-    border: none;
-    margin-bottom: 5%;
-    height: 10%;
-    width: 25%;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.nextButton p{
-    text-align: center;
+.nextButton p {
+  text-align: center;
 }
 
 button:hover {
-    background-color: #1F7337;
-    cursor: pointer;
+  background-color: #1F7337;
+  cursor: pointer;
 }
 
-/* 🌐 Responsiivisuus pienemmille näytöille */
+/* Responsiivisuus pienemmille näytöille */
 @media (max-width: 600px) {
-    .peli1 {
-      padding: 40px 20px; /* vähemmän sisennystä pienessä ruudussa */
-      margin: 10% auto;
-    }
-  
-    img {
-      width: 100px; /* skaalaa pienemmäksi */
-    }
-  
-    .nextButton{
-      width: 80%; /* helpompi klikata mobiilissa */
-      font-size: 1.1rem;
-    }
-
+  .peli1 {
+    padding: 40px 20px;
+    margin: 10% auto;
   }
-  
+
+  img {
+    width: 100px;
+  }
+
+  .nextButton {
+    width: 80%; /* helpompi klikata mobiilissa */
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer säilyy alhaalla */
+footer {
+  margin-top: auto; 
+}

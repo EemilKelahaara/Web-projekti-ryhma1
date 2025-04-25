@@ -6,6 +6,7 @@ html, body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 header {
@@ -41,6 +42,7 @@ header {
   color: white;
   font-size: 18px;
   font-weight: bold;
+  margin-left: 20px; 
 }
 
 nav {
@@ -161,7 +163,7 @@ main {
 }
 
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 555px) { /*  Responsiivisuus pienemmille näytöille */
   nav {
     position: absolute;
     top: 60px;
@@ -194,10 +196,13 @@ main {
   .menu-toggle {
     display: block;
   }
+  .logo {
+    padding-right: 20px; 
+  }
 }
 
 
-@media screen and (min-width: 556px) {
+@media screen and (min-width: 556px) { /*  Responsiivisuus pienemmille näytöille */
   .menu-toggle {
     display: none;
   }

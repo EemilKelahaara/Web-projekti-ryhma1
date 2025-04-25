@@ -1,4 +1,4 @@
-const flags = [
+const flags = [ //Vaihtoehtojen maat ja kuvat
     { country: "Suomi", image: "./kuvat/Flag_of_Finland.svg" },
     { country: "Ruotsi", image: "./kuvat/Flag_of_Sweden.svg" },
     { country: "Norja", image: "./kuvat/Flag_of_Norway.svg" },
@@ -42,7 +42,7 @@ function getRandomFlags(allFlags, count) {
     return shuffled.slice(0, count);
 }
 
-function getRandomWrongAnswers(correctCountry) {
+function getRandomWrongAnswers(correctCountry) { //Arpoo Flagseista 2 väärää vastausvaihtoehtoa
     const wrongs = flags
         .filter(flag => flag.country !== correctCountry)
         .sort(() => 0.5 - Math.random())

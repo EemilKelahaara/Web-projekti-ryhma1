@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css"><!--Tyylien linkitys-->
 </head>
 <body>
 
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header><!--Navigointipalkki-->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button><!--Mobiilinäytössä oleva hampurilaismenun nappi-->
     <a href="index.html"class="logo">Etusivu</a>
     <nav class="navbar" id="navLinks">
       <a href="peli1.html">Lippupeli</a>
@@ -23,7 +23,7 @@
         <h4>Tervetuloa meidän nettisivuillemme!</h4>
         <h4>Täällä pääset hiomaan osaamistasi maantiedosta lippupelin ja maanosapelien avulla.</h4>
         </a>
-        <div class="game-images">
+        <div class="game-images"> <!--Linkit peleihin kuvien kautta-->
             <a href="peli1.html" class="peli">
                 <img src=".//kuvat/liput.jpg" alt="Lippupeli">
                 <p>Lippupeli</p>
@@ -51,7 +51,7 @@
     <img src="kuvat/Finland_flag_Border_ml.png" alt="Suomen lippu">
 </footer>
 
-  <script>
+  <script> //Hampurilaismenun avaus ja toiminnallisuus
     function toggleMenu() {
       const nav = document.getElementById('navLinks');
       nav.classList.toggle('open');

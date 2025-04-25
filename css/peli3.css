@@ -41,7 +41,7 @@ input[type="submit"]:hover{
   margin: 0.5rem 0;
   font-size: 1rem;
 }
-
+/*  Responsiivisuus pienemmille näytöille */
 @media screen and (max-width: 600px) {
   .peli3 {
     padding: 1rem;

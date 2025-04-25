@@ -1,4 +1,4 @@
-const countries = [
+const countries = [ //Vastausvaihtoehdot ja kuvat
     { nimi: "Suomi", paakaupunki: "Helsinki", lippu: "Suomi.png" },
     { nimi: "Ruotsi", paakaupunki: "Tukholma", lippu: "Ruotsi.png" },
     { nimi: "Saksa", paakaupunki: "Berliini", lippu: "Saksa.png" },
@@ -19,78 +19,62 @@ const countries = [
     { nimi: "Israel", paakaupunki: "Jerusalem", lippu: "Israel.png" }
 ];
 
-
-// Pelin tilastot
-let oikeatVastaukset = 0;
-let virheet = 0;
-let kierros = 0;
+let oikeat = 0, vaarat = 0, kierros = 0;
 const maxKierrokset = 10;
+let oikeaPaakaupunki = "";
 
 function uusiKierros() {
-    // Satunnaisesti valitaan oikea maa
-    const oikeaMaa = countries[Math.floor(Math.random() * countries.length)];
-    const oikeaPaakaupunki = oikeaMaa.paakaupunki;
+    const maa = countries[Math.floor(Math.random() * countries.length)];
+    oikeaPaakaupunki = maa.paakaupunki;
 
-    // Valitaan kaksi väärää pääkaupunkia
-    let väärätPääkaupungit = [];
-    while (väärätPääkaupungit.length < 2) {
-      const vääräMaa = countries[Math.floor(Math.random() * countries.length)];
-      if (vääräMaa.paakaupunki !== oikeaPaakaupunki && !väärätPääkaupungit.includes(vääräMaa.paakaupunki)) {
-        väärätPääkaupungit.push(vääräMaa.paakaupunki);
-      }
+    const vaaratVaihtoehdot = [];
+    while (vaaratVaihtoehdot.length < 2) {
+        const vaara = countries[Math.floor(Math.random() * countries.length)].paakaupunki;
+        if (vaara !== oikeaPaakaupunki && !vaaratVaihtoehdot.includes(vaara)) {
+            vaaratVaihtoehdot.push(vaara);
+        }
     }
 
-    // Sekoitetaan oikea pääkaupunki ja väärät pääkaupungit
-    let vaihtoehdot = [oikeaPaakaupunki, väärätPääkaupungit[0], väärätPääkaupungit[1]];
+    const vaihtoehdot = [oikeaPaakaupunki, ...vaaratVaihtoehdot].sort(() => Math.random() - 0.5);
 
-    // Satunnaistetaan valintojen järjestys
-    const randomOptions = vaihtoehdot.sort(() => Math.random() - 0.5);
-
-    // Asetetaan vaihtoehdot select-elementtiin
-    const selectElement = document.getElementById("maat");
-    selectElement.innerHTML = randomOptions.map(option => `<option value="${option}">${option}</option>`).join('');
-
-    // Näytetään oikean maan lippu (polku kuville)
-    const flagElement = document.getElementById("flag");
-    flagElement.src = "kuvat/" + oikeaMaa.lippu; // Lisää "img/"-polku kuviin
-
-    return { oikeaMaa, oikeaPaakaupunki };
+    document.getElementById("flag").src = "kuvat/" + maa.lippu;
+    document.getElementById("maat").innerHTML = vaihtoehdot
+        .map(v => `<option value="${v}">${v}</option>`)
+        .join('');
+    
+    document.getElementById("result").textContent = "";
 }
 
-// Uusi kierros
-let { oikeaMaa, oikeaPaakaupunki } = uusiKierros();
+function tarkistaVastaus() {
+    const valinta = document.getElementById("maat").value;
+    const tulos = document.getElementById("result");
 
-// Tarkistusnappulan toiminta
-document.getElementById("checkButton").addEventListener('click', function() {
-    const selectElement = document.getElementById("maat");
-    const valittu = selectElement.value;
-    const resultElement = document.getElementById("result");
-
-    if (valittu === "") {
-        resultElement.textContent = "Valitse pääkaupunki!";
-        resultElement.style.color = "black";
-    } else if (valittu === oikeaPaakaupunki) {
-        resultElement.textContent = "Oikein! Se on " + oikeaPaakaupunki;
-        resultElement.style.color = "green";
-        oikeatVastaukset++;
-    } else {
-        resultElement.textContent = "Väärin! Oikea pääkaupunki on " + oikeaPaakaupunki;
-        resultElement.style.color = "red";
-        virheet++;
+    if (!valinta) {
+        tulos.textContent = "Valitse paakaupunki!";
+        tulos.style.color = "black";
+        return;
     }
 
-    // Päivitetään tulokset
+    if (valinta === oikeaPaakaupunki) {
+        tulos.textContent = "Oikein!";
+        tulos.style.color = "green";
+        oikeat++;
+    } else {
+        tulos.textContent = `Väärin! Oikea vastaus oli ${oikeaPaakaupunki}`;
+        tulos.style.color = "red";
+        vaarat++;
+    }
+
     kierros++;
+
     if (kierros < maxKierrokset) {
-        setTimeout(() => {
-            // Seuraava kierros
-            ({ oikeaMaa, oikeaPaakaupunki } = uusiKierros());
-        }, 1000);
+        uusiKierros();
     } else {
-        // Pelin loppu ja tulosten näyttäminen
-        setTimeout(() => {
-            document.getElementById("score").textContent = `Peli loppui! Oikein: ${oikeatVastaukset} Väärin: ${virheet}`;
-            document.getElementById("checkButton").disabled = true; // Estetään lisää kysymyksiä
-        }, 1000);
+        document.getElementById("score").textContent =
+            `Peli loppui! Oikein: ${oikeat} Väärin: ${vaarat}`;
+        document.getElementById("checkButton").disabled = true;
     }
-});
+}
+
+document.getElementById("checkButton").addEventListener("click", tarkistaVastaus);
+uusiKierros();

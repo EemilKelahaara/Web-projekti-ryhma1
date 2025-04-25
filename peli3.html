@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maanosapeli</title>
-    <link rel="stylesheet" href="./css/peli3.css">
+    <link rel="stylesheet" href="./css/peli3.css"> <!--Tyylien linkitys-->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <header><!--Navigointipalkki-->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!--Mobiilinäytössä oleva hampurilaismenun nappi-->
         <a href="index.html"class="logo">Etusivu</a>
         <nav class="navbar" id="navLinks">
           <a href="peli1.html">Lippupeli</a>
@@ -33,12 +33,12 @@
               <option value="etelämanner">Etelämanner</option>
               <option value="etelä-amerikka">Etelä-Amerikka</option>
             </select>
-            <input type="submit" value="Seuraava">
+            <input type="submit" value="Seuraava"> <!--Nappi seuraavaan kysymykseen-->
             <p id="palaute"></p>
             <p id="pisteet">Pisteet: 0</p>
         </div>
 
-        <script type="text/javascript" src="./js/peli3.js"></script>
+        <script type="text/javascript" src="./js/peli3.js"></script> <!--Js tiedoston linkkaus-->
     </main>
     <footer>
         <a href="#">Maantieto</a>
@@ -49,7 +49,7 @@
         <img src="kuvat/Finland_flag_Border_ml.png" alt="Suomen lippu" />
       </footer>
 
-      <script>
+      <script> //Hampurilaismenun avaus ja toiminnallisuus
         function toggleMenu() {
           const nav = document.getElementById('navLinks');
           nav.classList.toggle('open');

@@ -1,4 +1,4 @@
-const maanosat = [
+const maanosat = [ //vastausvaihtoehdot ja kuvat
   { nimi: "aasia", kuva: "kuvat/aasia.png" },
   { nimi: "eurooppa", kuva: "kuvat/eurooppa.png" },
   { nimi: "afrikka", kuva: "kuvat/afrikka.png" },
@@ -8,7 +8,7 @@ const maanosat = [
   { nimi: "etelä-amerikka", kuva: "kuvat/etelä-amerikka.png" }
 ];
 
-function sekoitaTaulukko(taulukko) {
+function sekoitaTaulukko(taulukko) { 
   for (let i = taulukko.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [taulukko[i], taulukko[j]] = [taulukko[j], taulukko[i]];
