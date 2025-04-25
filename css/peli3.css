@@ -21,6 +21,10 @@ h1 {
     text-decoration: underline;
     
 }
+input[type="submit"]:hover{
+  background-color: #1F7337;
+  cursor: pointer;
+}
 
 .peli3 img {
   width: 100%;
