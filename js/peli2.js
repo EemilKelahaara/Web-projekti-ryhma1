@@ -1,4 +1,4 @@
-const countries = [ //Vastausvaihtoehdot ja kuvat
+const countries = [ // Vastausvaihtoehdot ja kuvat
     { nimi: "Suomi", paakaupunki: "Helsinki", lippu: "Suomi.png" },
     { nimi: "Ruotsi", paakaupunki: "Tukholma", lippu: "Ruotsi.png" },
     { nimi: "Saksa", paakaupunki: "Berliini", lippu: "Saksa.png" },
@@ -41,8 +41,10 @@ function uusiKierros() {
     document.getElementById("maat").innerHTML = vaihtoehdot
         .map(v => `<option value="${v}">${v}</option>`)
         .join('');
-    
+
     document.getElementById("result").textContent = "";
+    document.getElementById("nextButton").style.display = "none";
+    document.getElementById("checkButton").disabled = false;
 }
 
 function tarkistaVastaus() {
@@ -50,7 +52,7 @@ function tarkistaVastaus() {
     const tulos = document.getElementById("result");
 
     if (!valinta) {
-        tulos.textContent = "Valitse paakaupunki!";
+        tulos.textContent = "Valitse pääkaupunki!";
         tulos.style.color = "black";
         return;
     }
@@ -67,14 +69,18 @@ function tarkistaVastaus() {
 
     kierros++;
 
+    document.getElementById("checkButton").disabled = true;
+
     if (kierros < maxKierrokset) {
-        uusiKierros();
+        document.getElementById("nextButton").style.display = "inline";
     } else {
         document.getElementById("score").textContent =
             `Peli loppui! Oikein: ${oikeat} Väärin: ${vaarat}`;
-        document.getElementById("checkButton").disabled = true;
+        document.getElementById("nextButton").style.display = "none";
     }
 }
 
 document.getElementById("checkButton").addEventListener("click", tarkistaVastaus);
+document.getElementById("nextButton").addEventListener("click", uusiKierros);
+
 uusiKierros();
