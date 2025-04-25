@@ -1,245 +1,222 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
 header {
-    background-color: #43C368;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width:100%;
-  }
-  
-  .menu-toggle {
-    font-size: 24px;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10; /* Ensure the hamburger button is on top */
-  }
-  
-  .menu-toggle:hover {
-    background-color: #f0f0f0;
-    color: #43C368;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-  }
-  
-  .logo {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  background-color: #43C368;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.menu-toggle:hover {
+  background-color: #f0f0f0;
+  color: #43C368;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #43C368;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 15px;
+}
+
+footer {
+  background-color: #43C368;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: underline;
+  color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #cfead8;
+}
+
+footer img {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+.alateksti {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.game-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.peli {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 200px;
+}
+
+.peli img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.peli p {
+  margin-top: 10px;
+}
+
+.linkkikuva {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkkikuva img {
+  display: block;
+  margin: 0 auto;
+}
+
+.linkkikuva p {
+  margin: 10px 0 0 0;
+}
+
+
+@media screen and (max-width: 555px) {
   nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #43C368;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+  }
+
+  nav.open {
     display: flex;
-    gap: 10px;
   }
-  
+
   nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    border-bottom: 1px solid white;
+    padding: 15px 0;
   }
-  
-  nav a:hover {
+
+  .navbar a:hover {
     color: #43C368;
     background-color: white;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
 
-button {
-    margin-left: 10px;
-    padding: 5px 15px;
-}
-
-nav {
-  
-  box-sizing: border-box;
-}
-
-nav a {
-  width: 100%; 
-  box-sizing: border-box;
-  padding: 15px 20px; 
-  border-bottom: 1px solid white;
-  text-align: center;
-}
-
-footer {
-    background-color: #43C368;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-footer a {
-    text-decoration: underline;
-    color: white;
-    font-size: 18px;
-    margin-left: 20px;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: #cfead8;
-  }
-  
-  .copyright {
-    text-align: center;
-  }
-  
-  footer img {
-    width: 50px;
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  /* Mobile Styles */
-  @media screen and (max-width: 555px) {
-    /* Make navigation a vertical menu */
-    nav {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #43C368;
-      flex-direction: column;
-      width: 100%;
-      display: none;
-      padding: 10px 0;
-    }
-  
-    /* Show nav menu when 'open' class is added */
-    nav.open {
-      display: flex;
-    }
-  
-    nav a {
-      border-bottom: 1px solid white;
-      padding: 15px 0;
-    }
-  
-    /* Apply hover effect for mobile view */
-    .navbar a:hover {
-      color: #43C368;
-      background-color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transform: scale(1.1);
-    }
-  
-    /* Show hamburger button on mobile */
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* Default styles for larger screens (above 555px) */
-  @media screen and (min-width: 556px) {
-    /* Hide hamburger menu button on larger screens */
-    .menu-toggle {
-      display: none;
-    }
-  
-    /* Regular horizontal navigation for larger screens */
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-  
-    nav a {
-      padding: 5px 10px;
-    }
-  
-    /* Hover effect for larger screens */
-    .navbar a:hover {
-      color: #43C368;
-      background-color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transform: scale(1.1);
-    }
-  }
-
-.copyright {
-    text-align: center;
-}
-
-footer img {
-    width: 50px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.game-images {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.peli {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    width: 200px;
-}
-
-.peli img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+  .menu-toggle {
     display: block;
-    margin: 0 auto;
-}
-
-.peli p {
-    margin-top: 10px;
+  }
 }
 
 
-.linkkikuva {
-    display: inline-block; 
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-}
+@media screen and (min-width: 556px) {
+  .menu-toggle {
+    display: none;
+  }
 
-.linkkikuva img {
-    display: block;
-    margin: 0 auto;
-}
+  nav {
+    display: flex;
+    gap: 10px;
+  }
 
-.linkkikuva p {
-    margin: 10px 0 0 0;
-}
+  nav a {
+    padding: 5px 10px;
+  }
 
-main {
-    flex: 1;
-}
-
-.alateksti {
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: bold;
+  .navbar a:hover {
+    color: #43C368;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
 }
